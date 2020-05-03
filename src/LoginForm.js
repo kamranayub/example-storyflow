@@ -10,7 +10,7 @@ const PasswordField = () => {
   } = useField("password", {
     async validate(password) {
       if (!password) {
-        return "A password is required";
+        return "Password is required";
       }
       return false;
     }
