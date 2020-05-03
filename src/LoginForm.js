@@ -54,17 +54,17 @@ export const LoginForm = ({ onSubmit }) => {
   return (
     <Form>
       <div>
-        <label for="username">Username</label>
+        <label htmlFor="username">Username</label>
         <UsernameField />
       </div>
 
       <div>
-        <label for="password">Password</label>
+        <label htmlFor="password">Password</label>
         <PasswordField />
       </div>
 
       <div>
-        <button type="submit" disabled={!canSubmit}>
+        <button data-testid="submit" type="submit" disabled={!canSubmit}>
           Login
         </button>
       </div>

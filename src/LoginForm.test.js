@@ -1,11 +1,15 @@
 import React from "react";
-import { render } from "@testing-library/react";
+import { act, render, fireEvent } from "@testing-library/react";
 import { Blank } from "./LoginForm.stories";
 
 describe("<LoginForm />", () => {
-  test("should validate username is required", () => {
-    const { getByText } = render(<Blank />);
+  test("should validate username is required", async () => {
+    const { findByText, getByTestId } = render(<Blank />);
 
-    expect(getByText("Username is required")).toBeDefined();
+    act(() => {
+      fireEvent.click(getByTestId("submit"));
+    });
+
+    expect(await findByText("Username is required")).toBeDefined();
   });
 });

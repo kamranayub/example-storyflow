@@ -14,14 +14,29 @@
   },
   "devDependencies": {
     "@babel/core": "^7.8.3",
+    "@babel/preset-env": "^7.9.6",
+    "@babel/preset-react": "^7.9.4",
     "@storybook/addon-actions": "^5.3.9",
     "@storybook/addon-links": "^5.3.9",
     "@storybook/addons": "^5.3.9",
     "@storybook/react": "^5.3.9",
     "@testing-library/react": "^10.0.4",
+    "babel-jest": "^25.5.1",
     "babel-loader": "^8.0.6",
-    "jest": "25.5.4",
-    "nodemon": "1.18.4"
+    "jest": "^25.5.4",
+    "jest-transform-css": "^2.0.0",
+    "nodemon": "1.18.4",
+    "react-test-renderer": "^16.13.1",
+    "regenerator-runtime": "^0.13.5"
   },
-  "keywords": []
+  "keywords": [],
+  "jest": {
+    "setupFilesAfterEnv": [
+      "./setupTests.js"
+    ],
+    "transform": {
+      "^.+\\.js$": "babel-jest",
+      ".+\\.(css|styl|less|sass|scss)$": "jest-transform-css"
+    }
+  }
 }
