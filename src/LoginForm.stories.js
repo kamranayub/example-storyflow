@@ -3,7 +3,8 @@ import { action } from "@storybook/addon-actions";
 import { LoginForm } from "./LoginForm";
 
 export default {
-  title: "Login Form"
+  title: "Login Form",
+  component: LoginForm,
 };
 
 const formSubmitAction = action("submit");

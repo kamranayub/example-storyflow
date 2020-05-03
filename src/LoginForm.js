@@ -6,14 +6,14 @@ import "./LoginForm.css";
 const PasswordField = () => {
   const {
     getInputProps,
-    meta: { error }
+    meta: { error },
   } = useField("password", {
     async validate(password) {
       if (!password) {
         return "Password is required";
       }
       return false;
-    }
+    },
   });
 
   return (
@@ -27,14 +27,14 @@ const PasswordField = () => {
 const UsernameField = () => {
   const {
     getInputProps,
-    meta: { error }
+    meta: { error },
   } = useField("username", {
     async validate(username) {
       if (!username) {
         return "Username is required";
       }
       return false;
-    }
+    },
   });
 
   return (
@@ -45,10 +45,13 @@ const UsernameField = () => {
   );
 };
 
-export const LoginForm = ({ onSubmit }) => {
+/**
+ * Your standard issue login form
+ */
+export const LoginForm = ({ onSubmit = undefined }) => {
   const {
     Form,
-    meta: { canSubmit }
+    meta: { canSubmit },
   } = useForm({ onSubmit });
 
   return (
