@@ -1,6 +1,6 @@
 ## Storyflow Example
 
-Companion demo to my talk, [Using Storybook to Build a Better... Game Engine?](https://slides.com/kamranayub/using-storybook-to-build-a-better-game-engin)
+Companion demo to my talk, [Using Storybook to Build a Better... Game Engine?](https://bit.ly/StoryflowMDC2020)
 
 Showcases using Storybook as the basis for unit and functional tests aka "Storyflow" workflow. Uses Storybook, Jest, and Cypress.
 
